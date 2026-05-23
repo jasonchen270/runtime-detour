@@ -1,17 +1,12 @@
 # runtime-detour
 
-Replace a function **at runtime** by overwriting its entry with a jump to a
-replacement, no recompile, no edit to its source. The "detour" / inline-hook
-technique behind Detours, funchook, and frida-gum.
+Replace a function **at runtime** by overwriting its entry with a jump to a replacement, with no recompile and no edit to its source. A C and x86-64/arm64 assembly demo of the "detour" / inline-hook technique behind Detours, funchook, and frida-gum.
 
-```
-before: answer() = 1
-after:  answer() = 42
-```
+## Prerequisites
+
+- A C compiler / toolchain (Linux, x86-64 or arm64)
 
 ## Build & run
-
-Linux, x86-64 or arm64:
 
 ```sh
 ./build.sh && ./detour
